@@ -4,7 +4,6 @@
 This project implements an image comparison tool using CUDA. The program performs pixel-wise XOR operations on two grayscale images after binarization, highlighting differences in the output.
 
 ## Features
-- Reads two images and converts the first to grayscale.
 - Performs binarization with a threshold.
 - Computes pixel-wise XOR between the binarized images.
 - Highlights differences in the original image.
@@ -27,8 +26,16 @@ Example:
 ```
 
 ## Output
-- `outputs/evidence_result_parallel.jpg` (Highlighted differences)
 - `outputs/XOR_parallel.jpg` (Binary XOR result)
+- `outputs/evidence_result_parallel.jpg` (Highlighted differences)
+<table>
+  <tr>
+    <td> <img src="inputs/hd1.jpeg"  alt="1" width = 380px height = 330px ></td>
+    <td> <img src="inputs/hd2.jpeg"  alt="1" width = 380px height = 330px ></td>
+    <td> <img src="outputs/XOR_parallel.jpg"  alt="1" width = 380px height = 330px ></td>
+    <td> <img src="outputs/evidence_result_parallel.jpg"  alt="1" width = 380px height = 330px ></td>
+  </tr>
+</table>
 
 ## CUDA Kernels
 ### 1. `binarization_kernel`
@@ -40,12 +47,12 @@ Performs pixel-wise XOR between two binary images.
 ### 3. `mark_differences_kernel`
 Highlights differences in the color image where XOR detected changes.
 
-## Performance
-The execution time is displayed after processing, depending on image size and GPU capabilities.
+## Performances
+![Table Comparison](tablecomparison.png)
 
 ## License
 This project is licensed under the MIT License.
 
 ## Author
-[Your Name]
+_Luigi Galluccio, 2025_
 
